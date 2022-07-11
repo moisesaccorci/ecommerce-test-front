@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://test-ecommerce-api-ma.herokuapp.com",
+    baseURL: process.env.API_URL,
     headers: {
         "Content-Type": "Authorization",
         "Content-Type": "application/json",
