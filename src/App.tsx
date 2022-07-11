@@ -6,6 +6,8 @@ import Home from './views/Home/Home';
 import Login from './views/Login/Login';
 import Store from './views/Store/Store';
 import Profile from './views/Profile/Profile';
+import Register from './views/Register/Register';
+import ProductForm from './views/ProductForm/ProductForm';
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='/login' element={ <Login /> } />
+        <Route path='/register' element={ <Register /> } />
         <Route path='/store' element={ <Store /> } />
         <Route path='/profile' element={ <Profile /> } />
+        <Route path='/profile/form' element={ <ProductForm /> } />
       </Routes>
 
     </>

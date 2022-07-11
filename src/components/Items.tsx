@@ -5,6 +5,17 @@ import '../styles/Item.css'
 export default function Items() {
     const [data, setData] = useState<any['products']>([])
 
+    function padTo2Digits(num) {
+        return num.toString().padStart(2, '0');
+      }
+      
+      function formatDate(date) {
+        return [
+          padTo2Digits(date.getDate()),
+          padTo2Digits(date.getMonth() + 1),
+          date.getFullYear(),
+        ].join('/');
+      }
 
     useEffect(() => {
         api.get("/products")
@@ -21,6 +32,7 @@ export default function Items() {
                     <h2>{item.name}</h2>
                     <h3>${item.price}</h3>
                     <h4>{item.description}</h4>
+                    <p>Created at {formatDate(new Date(item.created_at))}</p>
 
 
                 </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../views/Login/Login.css'
 import '../styles/bootstrap.css'
 import api from "../api/api";
+import { Link } from "react-router-dom";
 
 export default function Form() {
     const [email, setEmail] = useState<string>('')
@@ -71,7 +72,7 @@ export default function Form() {
 
 
                         </div>
-                        <button type="button" className="btn btn-warning" id="grey-button">Create your Amazing account</button>
+                        <Link to={'/register'}><button type="button" className="btn btn-warning" id="grey-button">Create your Amazing account</button></Link>
 
                     </form>
                 </div>

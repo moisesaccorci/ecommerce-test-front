@@ -3,7 +3,8 @@ import Footer from "../../components/Footer";
 import Navbar from '../../components/NavBar'
 import './Profile.css'
 import api from "../../api/api";
-import { config } from "process";
+import { Link } from "react-router-dom";
+
 
 export default function Profile() {
     const [data, setData] = useState<any['products']>([])
@@ -17,7 +18,7 @@ export default function Profile() {
             .catch((err) => {
                 console.error(err)
             })
-    }, [setData])
+    }, [data])
 
     useEffect(() => {
         api.get('/auth/login', {params: {
@@ -34,6 +35,7 @@ export default function Profile() {
                 <section className="userProfile">
                     <h1>Welcome!</h1>
                     <h4>All your items are listed down below</h4>
+                    <Link to={'/profile/form'}><h6>Add item</h6></Link>
                 </section>
 
                 <section className="item_listing">
