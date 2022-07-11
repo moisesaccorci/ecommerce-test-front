@@ -1,0 +1,13 @@
+.item_listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 70vh;
+}
+
+.item_props {
+    box-shadow: 10px 10px 5px lightblue;
+    padding: 5%;
+}

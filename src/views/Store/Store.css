@@ -1,0 +1,12 @@
+.user_welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user_welcome h4 {
+    margin-left: 3%;
+}
+.user_welcome h6 {
+    margin-right: 55px;
+}

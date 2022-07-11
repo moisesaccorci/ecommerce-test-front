@@ -1,0 +1,32 @@
+.profileLoginFail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bolder;
+
+    height: 70vh;
+    background-color: rgb(93, 93, 93);
+}
+
+.userProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 70vh;
+}
+
+.item_props {
+    box-shadow: 10px 10px 5px lightblue;
+    padding: 5%;
+}
