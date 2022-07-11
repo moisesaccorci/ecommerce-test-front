@@ -20,9 +20,7 @@ export default function Profile() {
     }, [setData])
 
     useEffect(() => {
-        api.get(`/auth/login?email=${email?.toString().replace('@','%40')}`, {
-          
-        })
+        api.get(`/auth/login?email=${email?.toString().replace('@','%40')}`)
             .then((response) => setUserId(response.data))
             .catch((err) => {
                 console.error(err)
