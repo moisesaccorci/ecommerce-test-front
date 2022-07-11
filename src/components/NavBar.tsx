@@ -20,7 +20,7 @@ export default function Navbar() {
                     <li>
                         <Link to={'/'}> <h6 className="pages">Home</h6></Link>
                         <Link to={'/store'}> <h6 className="pages">Store</h6></Link>
-                        <Link to={'/'}> <button className="primary-button" onClick={handleLogout}>Logout</button></Link>
+                        <Link to={'/'}><a className="primary-button" onClick={handleLogout}>Logout</a></Link>
                     </li>
                 </ul>
 
