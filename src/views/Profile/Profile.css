@@ -30,3 +30,14 @@
     box-shadow: 10px 10px 5px lightblue;
     padding: 5%;
 }
+
+.card_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.del_button {
+    background-color: red;
+}

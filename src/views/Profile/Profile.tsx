@@ -21,11 +21,12 @@ export default function Profile() {
     }, [data])
 
     useEffect(() => {
-        api.get('/auth/login', {params: {
-            email
-        }}).then(response => setUserId(response.data))
+        api.get('/auth/login', {
+            params: {
+                email
+            }
+        }).then(response => setUserId(response.data))
     }, [])
-
 
 
     if (userSession != '') {
@@ -41,11 +42,25 @@ export default function Profile() {
                 <section className="item_listing">
                     {data.map((item, index) => (
                         <div className="item_props" key={item.id}>
-                            <h2>{item.name}</h2>
-                            <h3>${item.price}</h3>
-                            <h4>{item.description}</h4>
+                            <div className="item_header">
+                                <div className="item_img">
+                                    <p>oi</p>
+                                </div>
+                                <h2>{item.name}</h2>
+                                <h3>${item.price}</h3>
+                            </div>
 
+                            <div className="item_desc">
+                                <h4>{item.description}</h4>
+                            </div>
 
+                            <div className="card_footer">
+                                <button className="del_button" onClick={async () => {
+                                    console.log('Item deleted: ' + item.id)
+                                    await api.delete('/products/' + item.id) 
+                                }}>Delete</button>
+                                <p>Edit</p>
+                            </div>
                         </div>
                     ))}
                 </section>
